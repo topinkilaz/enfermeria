@@ -1,7 +1,8 @@
 import React from "react";
 
 import { BlogCard } from "./BlogCard";
-import { useFetch } from "../../assets/Hooks/UseFetch";
+import { useFetch } from "../../Hooks/useFetch";
+
 
 export const BlogsComp = ({limit}) => {
 

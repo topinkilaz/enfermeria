@@ -1,6 +1,7 @@
 import React from 'react';
-import { useFetch } from '../../assets/Hooks/UseFetch';
+
 import { useParams } from 'react-router-dom';
+import { useFetch } from '../../Hooks/useFetch';
 
 export const ServicesInfo = () => {
   const { id } = useParams(); // Captura el ID del servicio desde la URL
