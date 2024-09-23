@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import img from "../assets/banner.png";
 
@@ -10,6 +10,10 @@ import { BlogsComp } from "../components/Blogs/BlogsComp.jsx";
 import { Metrics } from "../components/About/Metrics.jsx";
 
 export const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
   return (
     <>
       <div>

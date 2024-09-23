@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import portada from '../assets/video/portada.mp4'
 import { Link } from 'react-router-dom'
 
@@ -21,6 +21,9 @@ import { Questions } from '../components/FAQ/Questions'
 
 
 export const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
 
   const [orderPopup, setOrderPopup] = useState(false);
 

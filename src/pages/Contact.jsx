@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BannerHeader } from '../components/Bannerheader/BannerHeader'
 import img from '../assets/banner.png'
 import { Location } from '../components/Location/Location'
 import { ContactHeader } from '../components/Location/ContactHeader'
 
 export const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
   return (
     <>
      <BannerHeader img={img}>

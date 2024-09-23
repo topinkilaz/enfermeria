@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { BannerHeader } from '../components/Bannerheader/BannerHeader'
 import img from'../assets/banner.png'
@@ -6,8 +6,11 @@ import { BlogsComp } from '../components/Blogs/BlogsComp'
 
 
 export const Notices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
   
-  const today = new Date().toISOString().split('T')[0];
+
   
   return (
     

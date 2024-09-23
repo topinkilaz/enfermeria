@@ -14,6 +14,9 @@ import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
 
 const App = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
 useEffect(() => {
     AOS.init({
       offset: 100,

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from '../assets/banner.png'
 import { BannerHeader } from '../components/Bannerheader/BannerHeader'
 import { StickySidebar } from '../components/Serv/StickySidebar'
 import { ServicesInfo } from '../components/Serv/ServicesInfo'
 
 export const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [])
   return (
     <>
     <BannerHeader img={img}>
