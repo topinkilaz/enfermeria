@@ -1,13 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
+import  logo  from '../../assets/logo.svg'
 
 export const ServicesInfo = ({ defaultId = 2 }) => {
   const { id } = useParams(); 
   const serviceId = id || defaultId; 
-  const { data, isLoading, hasError, error } = useFetch(`https://strapi-enfermeria-app.onrender.com/api/posts/${serviceId}?populate=*`);
-
-  console.log(data); // Verificar la estructura de los datos
+  const { data, isLoading, hasError, error } = useFetch(`https://strapi-enfermeria-app.onrender.com/api/posts/${serviceId}`);
 
   if (isLoading) {
     return <p>Cargando servicio...</p>;
@@ -17,12 +16,15 @@ export const ServicesInfo = ({ defaultId = 2 }) => {
     return <p>Error {error.code}: {error.message}</p>;
   }
 
+  // Asegúrate de que los datos existen y que contienen el servicio
   if (!data || !data.data) {
     return <p>No se encontró el servicio.</p>;
   }
 
-  const service = data.data.attributes; // Accedemos a los atributos del servicio
-  const imageUrl = service.image?.formats?.medium?.url || service.image?.url; // Usamos el formato medium si está disponible, o el URL original
+  const service = data.data;
+
+  // Asegúrate de que 'service.image' existe antes de intentar acceder a sus propiedades
+  const imageUrl = service.image?.formats?.medium?.url || service.url || 'URL_DE_LA_IMAGEN_DEFAULT';
 
   return (
     <div>
@@ -36,29 +38,30 @@ export const ServicesInfo = ({ defaultId = 2 }) => {
           style={{ backgroundImage: 'linear-gradient(180deg, transparent, rgba(0,0,0,.7))' }}
         ></div>
 
+        {/* Asegúrate de mostrar una imagen válida o una por defecto */}
         <img
-          src={imageUrl ? imageUrl : 'URL_DE_LA_IMAGEN_DEFAULT'}
-          alt={service.title} // Usar el campo correcto del título
+          src={imageUrl} 
+          alt={service.title || 'Servicio sin título'} // Fallback en caso de que no haya título
           className="absolute left-0 top-0 w-full h-full z-0 object-cover"
         />
 
         <div className="p-4 absolute bottom-0 left-0 z-20">
           <a href="#" className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">
-            {service.title} {/* Usar el título */}
+            {service.title || 'Título del servicio'} {/* Usar el título o un fallback */}
           </a>
           <h2 className="text-4xl font-semibold text-gray-100 leading-tight">
-            {service.subtitle} {/* Aquí puedes mostrar el subtítulo o descripción */}
+            {service.subtitle || 'Subtítulo del servicio'} {/* Subtítulo o fallback */}
           </h2>
           <div className="flex mt-3">
             <img
-              src="https://randomuser.me/api/portraits/men/97.jpg"
+              src={logo}
               alt="Author"
               className="h-10 w-10 rounded-full mr-2 object-cover"
             />
             <div>
-              <p className="font-semibold text-gray-200 text-sm">Mike Sullivan</p>
+              <p className="font-semibold text-gray-200 text-sm">Santiago Salud</p>
               <p className="font-semibold text-gray-400 text-xs">
-                {new Date(service.publishedAt || service.createdAt).toLocaleDateString()} {/* Fecha de publicación */}
+                {new Date(service.publishedAt || service.createdAt).toLocaleDateString()} {/* Fecha */}
               </p>
             </div>
           </div>
@@ -69,9 +72,10 @@ export const ServicesInfo = ({ defaultId = 2 }) => {
         data-aos="fade-up"
         className="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
       >
+        {/* Muestra el contenido del servicio */}
         {service.content?.map((content, index) => (
           <p key={index} className="pb-6">
-            {content.children.map((child, i) => child.text)} {/* Mostrar el contenido del texto */}
+            {content.children.map((child, i) => child.text)} {/* Renderiza el texto */}
           </p>
         ))}
       </div>
