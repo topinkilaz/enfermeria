@@ -35,32 +35,32 @@ export const NavbarLinks = [
 
 export const DropdownLinks = [
   {
-    id:1,
+    id:2,
     name: "Vacunas",
     link: "/",
   },
   {
-    id:2,
+    id:4,
     name: "Enema",
     link: "/about",
   },
   {
-    id:3,
+    id:6,
     name: "Curaciones",
     link: "/best-places",
   },
   {
-      id:4,
+      id:8,
       name: "Nebulizaciones",
       link: "/best-places",
     },
   {
-    id:5,
+    id:10,
     name: "Control de Glicemia",
     link: "/blogs",
   },
   {
-      id:6,
+      id:12,
       name: "Banco de vacunas",
       link: "/blogs",
     },

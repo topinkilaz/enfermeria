@@ -19,7 +19,7 @@ export const Services = () => {
     <div className="bg-white w-full flex flex-col gap-5 px-3 md:px-16 lg:px-28 md:flex-row">
       {/* sticky sidebar */}
      <StickySidebar/>
-<ServicesInfo/>
+<ServicesInfo defaultId = {2}/>
      
     </div>
     </>
