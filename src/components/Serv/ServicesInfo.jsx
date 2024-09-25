@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 import  logo  from '../../assets/logo.svg'
 
-export const ServicesInfo = ({ defaultId = 2 }) => {
+export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   const { id } = useParams(); 
   const serviceId = id || defaultId; 
-  const { data, isLoading, hasError, error } = useFetch(`https://strapi-enfermeria-app.onrender.com/api/posts/${serviceId}`);
+  const { data, isLoading, hasError, error } = useFetch(`https://santiagosalud.onrender.com/api/posts/${serviceId}?populate=*`);
 
   if (isLoading) {
     return <p>Cargando servicio...</p>;

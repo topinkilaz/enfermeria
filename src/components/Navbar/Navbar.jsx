@@ -35,32 +35,32 @@ export const NavbarLinks = [
 
 export const DropdownLinks = [
   {
-    id:2,
+    id:"eag1mr5obv4g8mjlcarn71ex",
     name: "Vacunas",
     link: "/",
   },
   {
-    id:4,
+    id:"ujeji5jp5ewjna3mbcmjczz4",
     name: "Enema",
     link: "/about",
   },
   {
-    id:6,
+    id:"u940cp3u4za75qvox32w6fc0",
     name: "Curaciones",
     link: "/best-places",
   },
   {
-      id:8,
+      id:"c2n7wt1ww8zj0u1nl2fw053b",
       name: "Nebulizaciones",
       link: "/best-places",
     },
   {
-    id:10,
+    id:"q6z05p4s9bhlssdq0geatktq",
     name: "Control de Glicemia",
     link: "/blogs",
   },
   {
-      id:12,
+      id:"j9qqm3mvsros35a1dsnc8j6k",
       name: "Banco de vacunas",
       link: "/blogs",
     },

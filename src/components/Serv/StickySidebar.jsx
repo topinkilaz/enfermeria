@@ -20,12 +20,7 @@ export const StickySidebar = () => {
         </li>
         ))}
       </ul>
-      <button
-        type="submit"
-        className="mt-6 text-red-500 text-sm font-semibold hover:text-primary mb-1 border bg-white px-3 py-2 rounded-md transition duration-200 ease-in-out hover:bg-violet-200 hover:shadow-md"
-      >
-        Log Out
-      </button>
+      
     </div>
   </aside>
   )
