@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 import  logo  from '../../assets/logo.svg'
 
 export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
+  
   const { id } = useParams(); 
   const serviceId = id || defaultId; 
   const { data, isLoading, hasError, error } = useFetch(`https://santiagosalud.onrender.com/api/posts/${serviceId}?populate=*`);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [serviceId]);
   if (isLoading) {
     return <p>Cargando servicio...</p>;
   }
@@ -26,6 +30,8 @@ export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   // Asegúrate de que 'service.image' existe antes de intentar acceder a sus propiedades
   const imageUrl = service.image?.formats?.medium?.url || service.url || 'URL_DE_LA_IMAGEN_DEFAULT';
 
+
+ 
   return (
     <div>
       <div

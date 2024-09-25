@@ -37,32 +37,32 @@ export const DropdownLinks = [
   {
     id:"eag1mr5obv4g8mjlcarn71ex",
     name: "Vacunas",
-    link: "/",
+    link: "/services/eag1mr5obv4g8mjlcarn71ex",
   },
   {
     id:"ujeji5jp5ewjna3mbcmjczz4",
     name: "Enema",
-    link: "/about",
+    link: "/services/ujeji5jp5ewjna3mbcmjczz4",
   },
   {
     id:"u940cp3u4za75qvox32w6fc0",
     name: "Curaciones",
-    link: "/best-places",
+    link: "/services/u940cp3u4za75qvox32w6fc0",
   },
   {
       id:"c2n7wt1ww8zj0u1nl2fw053b",
       name: "Nebulizaciones",
-      link: "/best-places",
+      link: "/services/c2n7wt1ww8zj0u1nl2fw053b",
     },
   {
     id:"q6z05p4s9bhlssdq0geatktq",
     name: "Control de Glicemia",
-    link: "/blogs",
+    link: "/services/q6z05p4s9bhlssdq0geatktq",
   },
   {
       id:"j9qqm3mvsros35a1dsnc8j6k",
       name: "Banco de vacunas",
-      link: "/blogs",
+      link: "/services/j9qqm3mvsros35a1dsnc8j6k",
     },
 ];
 export const Navbar = () => {
@@ -115,25 +115,25 @@ export const Navbar = () => {
                   </NavLink>
                 </li>
                 <li className="group relative cursor-pointer">
-                  <a
-                    href="/services"
+                  <NavLink
+                    to="/services"
                     className="flex h-[72px] items-center gap-[2px]"
                   >
                     Servicios{""}
                     <span>
                         <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
                     </span>
-                  </a>
+                  </NavLink>
                   <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block shadow-md ">
                     <ul className="space-y-3">
                       {DropdownLinks.map((data) => (
                         <li key={data.id}>
-                          <a
-                            className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                            href={data.link}
-                          >
-                            {data.name}
-                          </a>
+                          <NavLink
+        className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+        to={data.link} // Cambia href a to
+      >
+        {data.name}
+      </NavLink>
                         </li>
                       ))}
                     </ul>
