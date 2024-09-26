@@ -7,7 +7,7 @@ export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   
   const { id } = useParams(); 
   const serviceId = id || defaultId; 
-  const { data, isLoading, hasError, error } = useFetch(`https://santiagosalud.onrender.com/api/posts/${serviceId}?populate=*`);
+  const { data, isLoading, hasError, error } = useFetch(`https://strapi-santiagosalud-production.up.railway.app/api/posts/${serviceId}?populate=*`);
 
   useEffect(() => {
     window.scrollTo(0, 0); 

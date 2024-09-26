@@ -48,7 +48,7 @@
 
 
 
-import React from "react";
+/* import React from "react";
 
 import { BlogCard } from "./BlogCard";
 import { useFetch } from "../../Hooks/useFetch";
@@ -96,51 +96,51 @@ export const BlogsComp = ({limit}) => {
       </div>
     </>
   )
-}
+} */
 
 
-// import React from "react";
-// import { BlogCard } from "./BlogCard";
-// import { useFetch } from "../../Hooks/useFetch";
+import React from "react";
+import { BlogCard } from "./BlogCard";
+import { useFetch } from "../../Hooks/useFetch";
 
-// export const BlogsComp = ({ limit }) => {
-//   // Obtén la fecha de hace 2 días
-//   const yesterday = new Date();
-//   yesterday.setDate(yesterday.getDate() - 1);  
-//   const formattedYesterday = yesterday.toISOString().split('T')[0];  
+export const BlogsComp = ({ limit }) => {
+  // Obtén la fecha de hace 2 días
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);  
+  const formattedYesterday = yesterday.toISOString().split('T')[0];  
 
-//   const apiKey = '5ee53ec7b7de4cf9247cc22ddb36bd8c';  
-//   const query = 'enfermedades'; 
-//   const language = 'es';  
-//   const maxResults = 10;  
-//   // Llamada a la API de GNews para obtener noticias relacionadas con 'salud'
-//   const { data } = useFetch(`https://gnews.io/api/v4/search?q=${query}&lang=${language}&max=${maxResults}&apikey=${apiKey}`);
+  const apiKey = '5ee53ec7b7de4cf9247cc22ddb36bd8c';  
+  const query = 'enfermedades'; 
+  const language = 'es';  
+  const maxResults = 10;  
+  // Llamada a la API de GNews para obtener noticias relacionadas con 'salud'
+  const { data } = useFetch(`https://gnews.io/api/v4/search?q=${query}&lang=${language}&max=${maxResults}&apikey=${apiKey}`);
 
   
 
-//   return (
-//     <>
-//       <div className="dark:bg-gray-900 dark:text-white py-10 font-montserrat">
-//         <section data-aos="fade-up" className="container">
-//           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-//             {data && data.articles ? (  // Verifica si 'data.articles' existe y tiene artículos
-//               data.articles.slice(0, limit).map((article, index) => (
-//                 <BlogCard
-//                   key={index}
-//                   image={article.image}  
-//                   date={article.publishedAt}  n
-//                   title={article.title}
-//                   description={article.description}
-//                   author={article.source.name}  
-//                   url={article.url}
-//                 />
-//               ))
-//             ) : (
-//               <p>Sin artículos publicados</p>
-//             )}
-//           </div>
-//         </section>
-//       </div>
-//     </>
-//   );
-// };
+  return (
+    <>
+      <div className="dark:bg-gray-900 dark:text-white py-10 font-montserrat">
+        <section data-aos="fade-up" className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {data && data.articles ? (  // Verifica si 'data.articles' existe y tiene artículos
+            data.articles.slice(0, limit).map((article, index) => (
+                 <BlogCard
+                   key={index}
+                   image={article.image}  
+                   date={article.publishedAt}  n
+                   title={article.title}
+                   description={article.description}
+                   author={article.source.name}  
+                   url={article.url}
+                 />
+               ))
+             ) : (
+               <p>Sin artículos publicados</p>
+             )}
+           </div>
+         </section>
+       </div>
+     </>
+   );
+ };
