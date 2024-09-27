@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Logo from "../../assets/logo.svg"
+import Logo from "../../assets/logo.png"
 import { Link, NavLink } from 'react-router-dom'
 import { FaCaretDown } from "react-icons/fa";
 import { HiMenuAlt1, HiMenuAlt3 } from 'react-icons/hi';
@@ -88,59 +88,85 @@ export const Navbar = () => {
             <div className="flex items-center gap-4  font-bold text-2xl">
                 {/* desplaza a la parte de arriba al hacer click en el logo */}
               <Link to={"/"} onClick={() => window.scrollTo(0, 0)}>
-                <img src={Logo} alt="" className="h-15" />
+                <img src={Logo} alt="" className="max-h-[65px]" />
               </Link>
             </div>
         
-        <div className="  hidden md:block">
-              <ul className="flex items-center gap-6 ">
-                <li className="py-4">
-                  <NavLink to="/" className="active">
-                    Inicio
-                  </NavLink>
-                </li>
-                <li className="py-4">
-                  <NavLink to="/about" className="active">
-                    Acerca de 
-                  </NavLink>
-                </li>
-                <li className="py-4">
-                  <NavLink to="/notices" className="active">
-                    Noticias
-                  </NavLink>
-                </li>
-                <li className="py-4">
-                  <NavLink to="/contact" className="active">
-                    Contacto
-                  </NavLink>
-                </li>
-                <li className="group relative cursor-pointer">
-                  <NavLink
-                    to="/services"
-                    className="flex h-[72px] items-center gap-[2px]"
-                  >
-                    Servicios{""}
-                    <span>
-                        <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
-                    </span>
-                  </NavLink>
-                  <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block shadow-md ">
-                    <ul className="space-y-3">
-                      {DropdownLinks.map((data) => (
-                        <li key={data.id}>
-                          <NavLink
-        className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-        to={data.link} // Cambia href a to
+            <div className="hidden md:block">
+  <ul className="flex items-center gap-6">
+    <li className="py-4">
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? 'text-blue-500' : 'text-gray-500'
+        }
       >
-        {data.name}
+        Inicio
       </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
+    </li>
+    <li className="py-4">
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? 'text-blue-500' : 'text-gray-500'
+        }
+      >
+        Acerca de
+      </NavLink>
+    </li>
+    <li className="py-4">
+      <NavLink
+        to="/notices"
+        className={({ isActive }) =>
+          isActive ? 'text-blue-500' : 'text-gray-500'
+        }
+      >
+        Noticias
+      </NavLink>
+    </li>
+    <li className="py-4">
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? 'text-blue-500' : 'text-gray-500'
+        }
+      >
+        Contacto
+      </NavLink>
+    </li>
+    <li className="group relative cursor-pointer">
+      <NavLink
+        to="/services"
+        className={({ isActive }) =>
+          isActive ? 'text-blue-500 flex h-[72px] items-center gap-[2px]' : 'text-gray-500 flex h-[72px] items-center gap-[2px]'
+        }
+      >
+        Servicios
+        <span>
+          <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+        </span>
+      </NavLink>
+      <div className="absolute -left-9 z-[9999] hidden w-[150px] rounded-md bg-white p-2 text-black group-hover:block shadow-md">
+        <ul className="space-y-3">
+          {DropdownLinks.map((data) => (
+            <li key={data.id}>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? 'inline-block w-full rounded-md p-2 bg-primary/20'
+                    : 'inline-block w-full rounded-md p-2 hover:bg-primary/20'
+                }
+                to={data.link}
+              >
+                {data.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
         <div className="flex items-center gap-4">
         <button
   className="bg-gradient-to-r from-primary to-dark hover:from-dark hover:to-primary transition-all duration-500 text-white px-3 py-1 rounded-full font-montserrat">     Login

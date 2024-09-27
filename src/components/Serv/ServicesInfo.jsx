@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
-import  logo  from '../../assets/logo.svg'
+import  logo  from '../../assets/pogop.png'
 
 export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   

@@ -47,8 +47,8 @@
 // };
 
 
-
-/* import React from "react";
+/* 
+ import React from "react";
 
 import { BlogCard } from "./BlogCard";
 import { useFetch } from "../../Hooks/useFetch";
@@ -96,8 +96,8 @@ export const BlogsComp = ({limit}) => {
       </div>
     </>
   )
-} */
-
+} 
+ */
 
 import React from "react";
 import { BlogCard } from "./BlogCard";
@@ -143,4 +143,4 @@ export const BlogsComp = ({ limit }) => {
        </div>
      </>
    );
- };
+ }; 

@@ -1,6 +1,6 @@
 import React from 'react'
 import portada from '../../assets/video/portada.mp4'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { DropdownLinks } from '../Navbar/Navbar'
@@ -66,7 +66,7 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 py-5 bg-white/80 backdrop-blur-sm rounded-t-xl">
             <div className="py-8 px-4">
               <h1 className="flex items-center gap-3 text-xl sm:text-3xl font-bold text-justify sm:text-left">
-                <img src={logo} alt="" className="max-h-[60px]" />
+                <img src={logo} alt="" className="max-h-[90px]" />
                 {/* TravelloGo */}
               </h1>
               <p className="text-sm">
