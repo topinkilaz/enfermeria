@@ -30,8 +30,8 @@ export const ContactHeader = () => {
                             Dirección
                         </dt>
                         <dd className="mt-2 text-base text-gray-500">
-                            Calle Principal 123, Oficina 100<br />
-                            Ciudad, País 12345
+                        Calle Ayacucho  # 378<br />
+                        Sucre, Bolivia
                         </dd>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export const ContactHeader = () => {
                             Teléfono
                         </dt>
                         <dd className="mt-2 text-base text-gray-500">
-                            +(591) 74512455 / 645212
+                        +(591) 71315480
                         </dd>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export const ContactHeader = () => {
                             Correo Electrónico
                         </dt>
                         <dd className="mt-2 text-base text-gray-500">
-                            contacto@centrodesalud.com
+                        santiagosaludsucre@gmail.com
                         </dd>
                     </div>
                 </div>
@@ -88,8 +88,8 @@ export const ContactHeader = () => {
                             Horarios de Atención
                         </dt>
                         <dd className="mt-2 text-base text-gray-500">
-                            Lunes - Viernes: 9am a 8pm<br />
-                            Sábado: 10am a 6pm<br />
+                        Lunes - Viernes: 8am a 8pm<br />
+                        Sábado: 8am a 2pm<br />
                             Domingo: Cerrado
                         </dd>
                     </div>

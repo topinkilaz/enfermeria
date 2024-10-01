@@ -11,7 +11,7 @@ export const Info = () => {
     </div>
     <div className="lg:w-1/2">
       <p className="text-base text-gray-700 md:text-lg">
-        En Apostol Salud, nos dedicamos a proporcionar un enfoque integral y personalizado en el cuidado de la salud. Nuestro objetivo es ofrecer servicios de enfermería con el más alto nivel de profesionalismo y dedicación, adaptados a las necesidades individuales de cada paciente.
+      Somos un centro de enfermería dedicado a brindar atención de calidad y personalizada a nuestros pacientes, tanto en nuestro local como en su hogar o lugar de trabajo. Ubicados frente al Hospital Santa Bárbara en Sucre - Bolivia, contamos con un equipo de profesionales altamente capacitados que ofrecen una amplia gama de servicios de salud. Nuestro compromiso es mejorar la calidad de vida de cada persona a través de cuidados integrales y cercanos, siempre enfocados en la confianza, la puntualidad y el profesionalismo.
       </p>
     </div>
   </div>

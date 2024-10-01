@@ -2,11 +2,12 @@ import React from 'react'
 import img1 from '../../assets/e1.webp'
 import img2 from '../../assets/e2.jpg'
 import img3 from '../../assets/e3.jpg'
+import { Link } from 'react-router-dom'
 
 export const CardL = () => {
   return (
-    <div  data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-3 font-montserrat">
-    {/* Card 1 */}
+    <div  data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-1 font-montserrat">
+   {/* 
     <div className="relative bg-teal-500 text-white p-8 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: `url(${img1})` }}></div>
       <div className="relative z-10">
@@ -21,7 +22,7 @@ export const CardL = () => {
     </div>
     
 
-    {/* Card 2 */}
+    
     <div className="relative bg-green-500 text-white p-8 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: `url(${img2})` }}></div>
       <div className="relative z-10">
@@ -43,11 +44,11 @@ export const CardL = () => {
       <p className="mb-4">
         Profesionales capacitados para prestar asistencia y cuidados en salud.
       </p>
-      <a href="#" className="font-semibold hover:underline">
+      <Link to="/about#equipo" className="font-semibold hover:underline">
         Saber más&nbsp;&raquo;
-      </a>
+      </Link>
     </div>
-    </div>
+    </div> 
   </div>
   )
 }

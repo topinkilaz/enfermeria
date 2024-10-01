@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import portada from '../assets/video/portada.mp4'
 import { Link } from 'react-router-dom'
 
@@ -30,6 +30,17 @@ export const Home = () => {
   const handleOrderPopup = () => {
     setOrderPopup(!orderPopup);
   };
+
+
+
+  const informationRef = useRef(null);
+
+  // Función para hacer scroll hacia la sección Information
+  const scrollToInformation = () => {
+    informationRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  
   return (
     <>
       <div>
@@ -43,46 +54,37 @@ export const Home = () => {
             <source src={portada} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            {/* Texto sobre el video */}
-            {/* <div className="text-center text-white p-4">
-          <h1 className="text-4xl font-serif mb-4 font-bold "><span className='text-6xl'>C</span>OMPROMISO DE <span className='text-6xl'>C</span>ALIDAD </h1>
-          <hr />
-          <p className="text-lg">Servicios integrales de salud con altos estándares de calidad y un enfoque en la obtención de resultados favorables.</p>
-        </div> */}
-
             <div className="w-full px-4">
               <div
                 className="hero-content text-center max-w-[780px] mx-auto wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                <h1
-                  className="text-black font-bold font-anton text-shadow text-3xl sm:text-4xl md:text-[45px] leading-snug sm:leading-snug md:leading-snug mb-8"
-                >
-                  <span className='text-6xl'>C</span>OMPROMISO DE <span className='text-6xl'>C</span>ALIDAD
+                <h1 className="text-black font-bold font-anton text-shadow text-3xl sm:text-4xl md:text-[45px] leading-snug sm:leading-snug md:leading-snug mb-8">
+                  <span className="text-6xl">C</span>OMPROMISO DE{' '}
+                  <span className="text-6xl">C</span>ALIDAD
                 </h1>
                 <hr />
-                <p data-aos="fade-up"
+                <p
+                  data-aos="fade-up"
                   className="text-base font-montserrat sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed mx-auto mb-10 text-[#e4e4e4] max-w-[600px]"
                 >
-                  Nos dedicamos a ofrecer servicios de salud de excelencia, superando los estándares tradicionales para garantizar resultados positivos y duraderos. Nuestro equipo de especialistas está comprometido a brindar una atención personalizada y de alta calidad en cada etapa del proceso.
+                  Nos dedicamos a cuidar de ti con dedicación y esmero, ofreciendo servicios de enfermería que van más allá de lo habitual para asegurar tu bienestar a largo plazo. Contamos con un equipo de profesionales comprometidos en brindarte una atención cercana, personalizada y de alta calidad en cada momento.
                 </p>
                 <ul className="flex flex-wrap items-center justify-center mb-10">
                   <li>
-                    <Link
-                      href=""
-                      className="py-4 px-6 sm:px-10 inline-flex items-center justify-center text-center text-black  font-montserrat text-base bg-white hover:text-primary hover:shadow-lg font-medium rounded-lg transition duration-300 ease-in-out"
+                    <button
+                      onClick={scrollToInformation}
+                      className="py-4 px-6 sm:px-10 inline-flex items-center justify-center text-center text-black font-montserrat text-base bg-white hover:text-primary hover:shadow-lg font-medium rounded-lg transition duration-300 ease-in-out"
                     >
-                      Mas información
-                    </Link>
+                      Más información
+                    </button>
                   </li>
                   <li>
                     <Link
-                      href=""
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      to="/contact"
                       className="text-base font-medium font-montserrat text-white py-4 px-6 sm:px-10 flex items-center hover:opacity-70 transition duration-300 ease-in-out"
                     >
-                      Contactanos
+                      Contáctanos
                       <span className="pl-2">
                         <svg
                           width="20"
@@ -97,28 +99,29 @@ export const Home = () => {
                   </li>
                 </ul>
               </div>
-            </div>          
-          </div>    
+            </div>
+          </div>
         </div>
-        <Information />
-        <CardL/>
-        <Places/>
+
+        {/* Sección Information con ref */}
+        <div ref={informationRef}>
+          <Information />
+        </div>
+
+        <CardL />
+        <Places />
         <BannerPic img={BannerImg} />
-        <div data-aos="fade-up" className='container'>
-    <h1 className="  font-anton my-8 border-l-8 border-primary/50  pl-2 text-3xl font-bold  py-2 ">
+        <div data-aos="fade-up" className="container">
+          <h1 className="font-anton my-8 border-l-8 border-primary/50 pl-2 text-3xl font-bold py-2">
             PUBLICACIONES RECIENTES
           </h1>
-    </div>
-        <BlogsComp limit={3}/>
-        
-        <Questions/>
+        </div>
+        <BlogsComp limit={3} />
+
+        <Questions />
 
         <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-       
-        
-        
       </div>
-
     </>
-  )
-}
+  );
+};

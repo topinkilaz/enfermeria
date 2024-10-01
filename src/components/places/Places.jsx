@@ -18,16 +18,16 @@ import Slider from 'react-slick';
     img: Img01,
     title: "Vacunas",
     location: "Sucre - Bolivia",
-    description: "La vacunación durante la infancia es una piedra angular en la prevención de enfermedades infecciosas que pueden tener efectos serios, incluso fatales, en los niños y comunidades. El acto de vacunar no solo protege al individuo, sino que también contribuye a la inmunidad colectiva, impidiendo la propagación de enfermedades contagiosas.",
-    url: './about',
+    description: "Las vacunas son una de las herramientas más importantes y efectivas en la prevención de enfermedades infecciosas. Funcionan estimulando el sistema inmunológico del cuerpo para que reconozca y combata patógenos específicos, como virus o bacterias, sin causar la enfermedad. A lo largo de la historia, las vacunas han ayudado a erradicar enfermedades graves como la viruela y a controlar muchas otras, mejorando significativamente la salud pública mundial.",
+    url: '/services/eag1mr5obv4g8mjlcarn71ex#servicio',
     type: "Hepatitis B y Hepatitis A, Polio, Pertussis Acelular, Tétanos, etc.",
   },
     {
       img: Img1,
-      title: "Enema",
+      title: "Enemas",
       location: "Sucre - Bolivia",
-      description: "El enema, un procedimiento médico fundamental en el cuidado de la salud, juega un papel crucial en el tratamiento y la prevención de diversas afecciones digestivas. En el ámbito de la enfermería, los enemas son reconocidos no solo por su eficacia en el alivio de síntomas, sino también por su contribución al bienestar general del paciente.",
-      url: './about',
+      description: "Los enemas son procedimientos médicos que consisten en la introducción de líquido en el recto y el colon a través del ano. Se utilizan con diversos fines terapéuticos y diagnósticos, principalmente para limpiar el intestino, aliviar el estreñimiento, administrar medicamentos o preparar el colon para procedimientos médicos como la colonoscopía. Los enemas pueden ser realizados en un entorno clínico o en el hogar bajo la supervisión de un profesional de la salud.",
+      url: '/services/ujeji5jp5ewjna3mbcmjczz4#servicio',
       type: "Esenciales para la Salud Digestiva y el Bienestar General",
     },
     {
@@ -35,8 +35,8 @@ import Slider from 'react-slick';
       title: "Curaciones",
       location: "Sucre - Bolivia",
       description:
-        "Las curaciones son un aspecto esencial en el espectro del cuidado de la salud, desempeñando un papel vital en la recuperación y el bienestar del paciente. Estos procedimientos no solo tratan heridas y lesiones, sino que también previenen infecciones y promueven la cicatrización saludable de los tejidos.",
-      url: 6700,
+        "Las curaciones son un proceso fundamental en el manejo de heridas de diversas etiologías, ya que aseguran una adecuada cicatrización, previenen infecciones y mejoran la calidad de vida de los pacientes. A continuación, se abordarán de manera detallada distintos tipos de curaciones, incluyendo heridas quirúrgicas, úlceras por presión, úlceras vasculares (de etiología venosa y arterial), y úlceras neuropáticas (como el pie diabético).",
+      url: "/services/u940cp3u4za75qvox32w6fc0#servicio",
       type: "Procedimientos Vitales en el Cuidado y Recuperación del Paciente",
     },
     {
@@ -44,16 +44,16 @@ import Slider from 'react-slick';
       title: "Inyectables",
       location: "Sucre - Bolivia",
       description:
-        "Los inyectables son un elemento clave en el ámbito de la atención médica, desempeñando un papel vital tanto en el tratamiento de enfermedades como en la prevención de las mismas. Esta modalidad de administración de medicamentos es fundamental para garantizar una acción rápida y efectiva del tratamiento en muchas condiciones de salud.",
-      url: 6200,
+        "Los inyectables son una forma común y efectiva de administrar medicamentos directamente en el cuerpo mediante una inyección. Este método se utiliza cuando se requiere que el medicamento tenga una acción rápida, cuando no es posible administrar el fármaco por vía oral, o cuando se busca un efecto localizado. Los inyectables son ampliamente usados en hospitales, clínicas y a nivel domiciliario, y abarcan desde medicamentos rutinarios hasta vacunas y tratamientos especializados.",
+      url: "/services/m2jzinmxgc1p3bcdrsa885k0#servicio",
       type: "Un Componente Crítico en el Tratamiento Médico y la Prevención de Enfermedades",
     },
     {
       img: Img4,
-      title: " Presión Arterial",
+      title: " Presión Alta",
       location: "Sucre - Bolivia",
-      description: "La medición de la presión arterial es un procedimiento esencial en el campo de la atención médica, siendo un indicador vital de la salud cardiovascular del paciente. Este proceso no solo ayuda en el diagnóstico de hipertensión y otras afecciones cardíacas, sino que también es crucial en el monitoreo continuo y la gestión de la salud a largo plazo.",
-      url: 6700,
+      description: "La presión arterial alta, también conocida como hipertensión, es una afección médica crónica en la que la fuerza de la sangre contra las paredes de las arterias es demasiado elevada. Esta enfermedad, que afecta a millones de personas en todo el mundo, es un factor de riesgo significativo para el desarrollo de enfermedades cardiovasculares, accidentes cerebrovasculares (ACV), y problemas renales",
+      url:"/services/guoi951yurccfduajfz5wvsj#servicio",
       type: "La Importancia de la Medición de la Presión Arterial en el Cuidado de la Salud",
     },
     {
@@ -61,26 +61,17 @@ import Slider from 'react-slick';
       title: "Nebulizaciones",
       location: "Sucre - Bolivia",
       description:
-        "Las nebulizaciones son un procedimiento clave en el manejo de diversas afecciones respiratorias, proporcionando un método efectivo para la administración de medicamentos directamente a los pulmones. Este tratamiento es particularmente importante para pacientes con asma, enfermedad pulmonar obstructiva crónica (EPOC), fibrosis quística, y otras enfermedades respiratorias.",
-      url: 6700,
+        "Las nebulizaciones son un tratamiento médico utilizado para administrar medicamentos directamente a los pulmones a través de la inhalación. Este procedimiento es particularmente útil en el manejo de enfermedades respiratorias como el asma, la bronquitis, la enfermedad pulmonar obstructiva crónica (EPOC), y otras condiciones que afectan la función pulmonar. El objetivo principal de la nebulización es entregar el medicamento de manera rápida y efectiva, brindando alivio inmediato a los pacientes que presentan dificultades para respirar o congestión severa.",
+      url: "/services/c2n7wt1ww8zj0u1nl2fw053b#servicio",
       type: "Un Método Esencial en el Tratamiento de Afecciones Respiratorias",
     },
     {
-      img: Img6,
-      title: "Banco de Vacunas",
-      location: "Sucre - Bolivia",
-      description:
-        "Un banco de vacunas es una iniciativa crítica en el ámbito de la salud pública, desempeñando un papel esencial en la prevención y control de enfermedades infecciosas a nivel global. Este recurso no solo asegura el almacenamiento y conservación adecuados de las vacunas, sino que también facilita su distribución eficiente y equitativa.",
-      url: 6200,
-      type: "Un Pilar Fundamental en la Prevención y Control de Enfermedades",
-    },
-    {
       img: Img7,
-      title: "Control de Glicemia",
+      title: "Control de Glucemia",
       location: "Sucre - Bolivia",
       description:
-        "El control de glicemia, o medición de los niveles de glucosa en la sangre, es un procedimiento esencial en el manejo de la diabetes y en el cuidado general de la salud metabólica. Este proceso es crucial tanto para pacientes diagnosticados con diabetes como para aquellos en riesgo de desarrollar la enfermedad.",
-      url: 6200,
+        "El control de glucemia es un aspecto fundamental en el manejo de la diabetes, una enfermedad crónica que afecta la capacidad del cuerpo para regular los niveles de azúcar (glucosa) en sangre. La glucosa es una fuente de energía esencial para el organismo, pero cuando se encuentra en niveles elevados de forma prolongada, puede causar daño en diversos órganos y tejidos, y aumentar el riesgo de complicaciones graves.",
+      url: "/services/q6z05p4s9bhlssdq0geatktq#servicio",
       type: "Un Aspecto Vital en la Gestión de la Diabetes y la Salud Metabólica",
     },
   ];

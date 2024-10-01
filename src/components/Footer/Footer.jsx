@@ -13,25 +13,30 @@ const FooterLinks = [
     },
     {
       id:2,
-      title: "Nosotros",
+      title: "Acerca de",
       link: "/about",
     },
     {
       id:3,
       title: "Noticias",
-      link: "/best-places",
+      link: "/notices",
     },
     {
       id:4,
       title: "Contacto",
-      link: "/blogs",
+      link: "/contact",
     },
   ];
   const FooterLinks1 = [
     {
+      id:4,
+      title: "Nosotros",
+      link: "/about",
+    },
+    {
       id:1,
       title: "Mision",
-      link: "/",
+      link: "/about",
     },
     {
       id:2,
@@ -41,16 +46,16 @@ const FooterLinks = [
     {
       id:3,
       title: "Politicas de Privacidad",
-      link: "/best-places",
+      link: "/",
     },
-    {
-      id:4,
-      title: "Nosotros",
-      link: "/blogs",
-    },
+   
   ];
 
 export const Footer = () => {
+ 
+    const handleClick = () => {
+      window.open('https://wa.me/1234567890', '_blank'); 
+    };
   return (
     <>
     <div className=" dark:bg-gray-950 py-10 relative overflow-hidden font-montserrat">
@@ -79,7 +84,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3 mt-3">
                 <FaMobileAlt />
-                <p>+591 71514115</p>
+                <p>+(591) 71315480</p>
               </div>
               {/* social handles */}
               <div>
@@ -161,10 +166,18 @@ export const Footer = () => {
           </div>
           <div>
             <div className="text-center py-5 border-t-2 border-gray-300/50 bg-primary text-white">
-              @copyright 2024  Santiago Apostol Enfermeria. Todos los derechos reservados.
+              @copyright 2024  Enfermeria Santiago Salud . Todos los derechos reservados.
             </div>
           </div>
         </div>
+    </div>
+    <div className="fixed bottom-4 right-4">
+      <button
+        onClick={handleClick}
+        className="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition duration-200"
+      >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8" />
+      </button>
     </div>
     </>
   )

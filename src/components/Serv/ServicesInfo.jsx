@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 import  logo  from '../../assets/pogop.png'
 
@@ -9,9 +9,22 @@ export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   const serviceId = id || defaultId; 
   const { data, isLoading, hasError, error } = useFetch(`https://strapi-santiagosalud-production.up.railway.app/api/posts/${serviceId}?populate=*`);
 
+ 
+
+  const { hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   }, [serviceId]);
+
+
+
+
   if (isLoading) {
     return <p>Cargando servicio...</p>;
   }

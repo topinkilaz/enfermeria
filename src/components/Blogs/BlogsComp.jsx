@@ -97,7 +97,7 @@ export const BlogsComp = ({limit}) => {
     </>
   )
 } 
- */
+  */
 
 import React from "react";
 import { BlogCard } from "./BlogCard";

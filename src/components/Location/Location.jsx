@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export const Location = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    
+    const serviceId = "service_q3a8i8r";
+    const templateId = "template_2qsyrxi";
+    const userId = "YnJFGkeaPUrq2WBk4"; // Cambié el nombre de 'apikey' a 'userId'
+
+    emailjs.sendForm(serviceId, templateId, formRef.current, userId)
+    .then((result) => {
+      console.log(result.text);
+      alert("¡Mensaje enviado con éxito!");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Error al enviar el mensaje, por favor inténtalo de nuevo.");
+    });
+};
+
+
   return (
     <>
       <section data-aos="fade-up" className="">
@@ -15,27 +37,8 @@ export const Location = () => {
                 <div className="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14">
                   <h2 className="mb-12 text-3xl font-bold">Contáctanos</h2>
                   <form
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                    id="form"
+                   ref={formRef} onSubmit={sendEmail}
                   >
-                    <input
-                      type="hidden"
-                      name="access_key"
-                      value="YOUR_ACCESS_KEY_HERE"
-                    />
-                    <input
-                      type="hidden"
-                      name="subject"
-                      value="Nueva presentación de Web3Forms"
-                    />
-                    <input
-                      type="checkbox"
-                      name="botcheck"
-                      id=""
-                      style={{ display: 'none' }}
-                    />
-
                     <div className="mb-6">
                       <label
                         htmlFor="name"
@@ -45,8 +48,8 @@ export const Location = () => {
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        id="name"
+                        name="username" // Este nombre se usará en el template
+                        id="username"
                         placeholder="Juan Pérez"
                         required
                         className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
@@ -62,9 +65,9 @@ export const Location = () => {
                       </label>
                       <input
                         type="email"
-                        name="email"
+                        name="email" // Este nombre se usará en el template
                         id="email"
-                        placeholder="tucorreo@empresa.com"
+                        placeholder="tucorreo@ejemplo.com"
                         required
                         className="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
                       />
@@ -78,7 +81,7 @@ export const Location = () => {
                       </label>
                       <textarea
                         rows="5"
-                        name="message"
+                        name="message" // Este nombre se usará en el template
                         id="message"
                         placeholder="Tu mensaje aquí"
                         required
@@ -102,11 +105,14 @@ export const Location = () => {
               <div className="md:mb-12 lg:mb-0">
                 <div className="relative h-[800px] rounded-lg shadow-lg dark:shadow-black/20">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1585.6684166584948!2d-65.26258954814985!3d-19.047184752583174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf3603cbf2e5%3A0x6f6a42cc240d5f2c!2sJunin%20738%2C%20Sucre!5e0!3m2!1ses-419!2sbo!4v1691014739056!5m2!1ses-419!2sbo"
-                    className="absolute left-0 top-0 h-full w-full rounded-lg"
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.7140977887007!2d-65.26415869316597!3d-19.045017958111835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf4a59b7a039%3A0x135f24f644321503!2sAyacucho%20378%2C%20Sucre!5e0!3m2!1ses-419!2sbo!4v1727796555798!5m2!1ses-419!2sbo"
+                    width="500"
+                    height="800"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
             </div>
