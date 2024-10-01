@@ -54,7 +54,7 @@ const FooterLinks = [
 export const Footer = () => {
  
     const handleClick = () => {
-      window.open('https://wa.me/1234567890', '_blank'); 
+      window.open('https://wa.me/+59171315480', '_blank'); 
     };
   return (
     <>
@@ -172,13 +172,13 @@ export const Footer = () => {
         </div>
     </div>
     <div className="fixed bottom-4 right-4">
-      <button
-        onClick={handleClick}
-        className="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition duration-200"
-      >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8" />
-      </button>
-    </div>
+  <button
+    onClick={handleClick}
+    className="flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition duration-200 animate-pulse"
+  >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8" />
+  </button>
+</div>
     </>
   )
 }
