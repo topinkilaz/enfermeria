@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import { useFetch } from '../../Hooks/useFetch';
 import  logo  from '../../assets/pogop.png'
+import { RichTextRenderer } from './RichTextRenderer';
 
 export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
   
@@ -65,9 +66,9 @@ export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
         />
 
         <div className="p-4 absolute bottom-0 left-0 z-20">
-          <a href="#" className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">
+          <span className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mb-2">
             {service.title || 'Título del servicio'} {/* Usar el título o un fallback */}
-          </a>
+          </span>
           <h2 className="text-4xl font-semibold text-gray-100 leading-tight">
             {service.subtitle || 'Subtítulo del servicio'} {/* Subtítulo o fallback */}
           </h2>
@@ -91,12 +92,7 @@ export const ServicesInfo = ({ defaultId = "eag1mr5obv4g8mjlcarn71ex" }) => {
         data-aos="fade-up"
         className="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed"
       >
-        {/* Muestra el contenido del servicio */}
-        {service.content?.map((content, index) => (
-          <p key={index} className="pb-6">
-            {content.children.map((child, i) => child.text)} {/* Renderiza el texto */}
-          </p>
-        ))}
+        <RichTextRenderer content={service.content} />
       </div>
     </div>
   );

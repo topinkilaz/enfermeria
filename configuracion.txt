@@ -1,0 +1,33 @@
+#configuracion para hostinger
+.htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Si el archivo solicitado existe, sírvelo directamente
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Si la solicitud es para un archivo en /assets/, intenta servirlo directamente
+  RewriteCond %{REQUEST_URI} ^/assets/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^assets/(.*)$ /assets/$1 [L,R=404]
+
+  # Para todas las demás rutas, sirve index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Configurar tipos MIME correctos
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType text/javascript .js
+  AddType application/json .json
+  AddType text/css .css
+</IfModule>
+
+# Deshabilitar la caché para desarrollo (remover en producción)
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</IfModule>
