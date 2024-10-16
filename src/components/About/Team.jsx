@@ -1,24 +1,31 @@
 import React from 'react';
 import { TeamMembers } from './TeamMembers';
 
+import perfilImage from '../../assets/perfil.webp';
+import helenImage from '../../assets/Helen.jpg';
+import marisolImage from '../../assets/Marisol.jpg';
+import doraPdf from '../../assets/pdfs/Dora.pdf';
+import helenPdf from '../../assets/pdfs/Helen.pdf';
+import marisolPdf from '../../assets/pdfs/Marisol.pdf';
+
 const teamMembers = [
   {
     name: 'Dora Rojas Estrada',
     title: 'Auxiliar de Enfermería',
-    imgSrc: './src/assets/perfil.webp',
-    pdfUrl: './src/assets/pdfs/Dora.pdf',
+    imgSrc: perfilImage,
+    pdfUrl: doraPdf,
   },
   {
     name: 'Helen Emilene Taboada Espinoza',
     title: 'Licenciada en Enfermería',
-    imgSrc: './src/assets/Helen.jpg',
-    pdfUrl: './src/assets/pdfs/Helen.pdf',
+    imgSrc: helenImage,
+    pdfUrl: helenPdf,
   },
   {
     name: 'Marisol Llanque Sierra',
     title: 'Auxiliar de Enfermería',
-    imgSrc: './src/assets/Marisol.jpg',
-    pdfUrl: './src/assets/pdfs/Marisol.pdf',
+    imgSrc: marisolImage,
+    pdfUrl: marisolPdf,
   },
   {
     name: 'Isabel López',
