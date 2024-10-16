@@ -1,6 +1,16 @@
 import React from 'react'
+import { useFetch } from '../../Hooks/useFetch';
 
-export const BannerNotice = ({data}) => {
+export const BannerNotice = () => {
+
+  const apiKey = '5ee53ec7b7de4cf9247cc22ddb36bd8c';  
+  const query = 'enfermedades'; 
+  const language = 'es';  
+  const maxResults = 10;  
+ 
+  const { data } = useFetch(`https://gnews.io/api/v4/search?q=${query}&lang=${language}&max=${maxResults}&apikey=${apiKey}`);
+ 
+
 
   if (!data || !data.articles || data.articles.length === 0) {
     return null; // Puedes manejar aquí el caso cuando no haya resultados

@@ -3,45 +3,48 @@ import { TeamMembers } from './TeamMembers';
 
 const teamMembers = [
   {
-    name: 'Carlos Pérez',
-    title: 'Enfermero de Salud Pública',
-    imgSrc: 'https://images.pexels.com/photos/3772107/pexels-photo-3772107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    name: 'Dora Rojas Estrada',
+    title: 'Auxiliar de Enfermería',
+    imgSrc: './src/assets/perfil.webp',
+    pdfUrl: './src/assets/pdfs/Dora.pdf',
   },
   {
-    name: 'Laura Sánchez',
-    title: 'Especialista en Cuidados Intensivos',
-    imgSrc: 'https://images.pexels.com/photos/3825514/pexels-photo-3825514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    name: 'Helen Emilene Taboada Espinoza',
+    title: 'Licenciada en Enfermería',
+    imgSrc: './src/assets/Helen.jpg',
+    pdfUrl: './src/assets/pdfs/Helen.pdf',
   },
   {
-    name: 'Luis Martínez',
-    title: 'Enfermero de Atención Domiciliaria',
-    imgSrc: 'https://images.pexels.com/photos/7583382/pexels-photo-7583382.jpeg',
+    name: 'Marisol Llanque Sierra',
+    title: 'Auxiliar de Enfermería',
+    imgSrc: './src/assets/Marisol.jpg',
+    pdfUrl: './src/assets/pdfs/Marisol.pdf',
   },
   {
     name: 'Isabel López',
     title: 'Enfermera de Cuidados Crónicos',
     imgSrc: 'https://images.pexels.com/photos/4346362/pexels-photo-4346362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    pdfUrl: './pdfs/Dora.pdf',
   },
   {
     name: 'Juan Fernández',
     title: 'Enfermero de Emergencias',
     imgSrc: 'https://images.pexels.com/photos/3408748/pexels-photo-3408748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    pdfUrl: './pdfs/Dora.pdf',
   },
   {
     name: 'María Gómez',
     title: 'Enfermera de Salud Mental',
     imgSrc: 'https://images.pexels.com/photos/4066498/pexels-photo-4066498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    pdfUrl: './pdfs/Dora.pdf',
   },
   {
     name: 'José Martínez',
     title: 'Enfermero en Rehabilitación',
     imgSrc: 'https://images.pexels.com/photos/4459273/pexels-photo-4459273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    pdfUrl: './pdfs/Dora.pdf',
   },
-  {
-    name: 'Carla Ruiz',
-    title: 'Enfermera de Atención Primaria',
-    imgSrc: 'https://images.pexels.com/photos/3943790/pexels-photo-3943790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  },
+
 ];
 
 
@@ -62,6 +65,7 @@ export const Team = () => (
           name={member.name}
           title={member.title}
           imgSrc={member.imgSrc}
+          pdfUrl={member.pdfUrl}
         />
       ))}
     </div>

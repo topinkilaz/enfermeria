@@ -59,7 +59,7 @@ export const About = () => {
           </h1>
           <hr />
     </div>
-        <BlogsComp limit={3}/>
+        <BlogsComp limit={3} />
 
     
 

@@ -46,8 +46,8 @@
 //   );
 // };
 
-/* 
 
+/* 
  import React from "react";
 
 import { BlogCard } from "./BlogCard";
@@ -101,11 +101,18 @@ export const BlogsComp = ({limit}) => {
 
 import React from "react";
 import { BlogCard } from "./BlogCard";
+import { useFetch } from "../../Hooks/useFetch";
 
 
-export const BlogsComp = ({ limit , data}) => {
+export const BlogsComp = ({ limit }) => {
  
-
+  const apiKey = '5ee53ec7b7de4cf9247cc22ddb36bd8c';  
+  const query = 'enfermedades'; 
+  const language = 'es';  
+  const maxResults = 10;  
+ 
+  const { data } = useFetch(`https://gnews.io/api/v4/search?q=${query}&lang=${language}&max=${maxResults}&apikey=${apiKey}`);
+ 
   
 
   

@@ -22,12 +22,6 @@ export const Notices = () => {
   const value= 'enfermedades';
   const {data}=useFetch(`https://newsapi.org/v2/everything?q=${value}&from=${formattedYesterday}&sortBy=relevancy&language=es&apiKey=${key}`)
  */
-  const apiKey = '5ee53ec7b7de4cf9247cc22ddb36bd8c';  
-  const query = 'enfermedades'; 
-  const language = 'es';  
-  const maxResults = 10;  
- 
-  const { data } = useFetch(`https://gnews.io/api/v4/search?q=${query}&lang=${language}&max=${maxResults}&apikey=${apiKey}`);
  
   
   return (
@@ -43,7 +37,7 @@ export const Notices = () => {
      
  
 
-<BannerNotice data={data}/>
+
 
 <h1 className="  font-anton my-8 border-l-8 border-primary/50  pl-2 text-3xl   py-2 ">
             NOTICIAS ACTUALES ( MEDICINA / SALUD ) 
@@ -54,7 +48,7 @@ export const Notices = () => {
 
    
     </div>
-    <BlogsComp limit={9} data={data} />
+    <BlogsComp limit={9}  />
    
 <div data-aos="fade-up" className='container' >
 <BannerNotice0   />
