@@ -7,12 +7,16 @@ import marisolImage from '../../assets/Marisol.jpg';
 import doraPdf from '../../assets/pdfs/Dora.pdf';
 import helenPdf from '../../assets/pdfs/Helen.pdf';
 import marisolPdf from '../../assets/pdfs/Marisol.pdf';
+import DoraImage from '../../assets/Dora.jpeg';
+import JuliaImage from '../../assets/Julia.jpeg';
+import JuliaPdf from '../../assets/pdfs/Julia.pdf';
+
 
 const teamMembers = [
   {
     name: 'Dora Rojas Estrada',
     title: 'Auxiliar de Enfermería',
-    imgSrc: perfilImage,
+    imgSrc: DoraImage,
     pdfUrl: doraPdf,
   },
   {
@@ -28,29 +32,12 @@ const teamMembers = [
     pdfUrl: marisolPdf,
   },
   {
-    name: 'Isabel López',
-    title: 'Enfermera de Cuidados Crónicos',
-    imgSrc: 'https://images.pexels.com/photos/4346362/pexels-photo-4346362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    pdfUrl: './pdfs/Dora.pdf',
+    name: 'Julia Arcienega Avila',
+    title: 'Licenciada en Enfermería',
+    imgSrc: JuliaImage,
+    pdfUrl: JuliaPdf,
   },
-  {
-    name: 'Juan Fernández',
-    title: 'Enfermero de Emergencias',
-    imgSrc: 'https://images.pexels.com/photos/3408748/pexels-photo-3408748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    pdfUrl: './pdfs/Dora.pdf',
-  },
-  {
-    name: 'María Gómez',
-    title: 'Enfermera de Salud Mental',
-    imgSrc: 'https://images.pexels.com/photos/4066498/pexels-photo-4066498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    pdfUrl: './pdfs/Dora.pdf',
-  },
-  {
-    name: 'José Martínez',
-    title: 'Enfermero en Rehabilitación',
-    imgSrc: 'https://images.pexels.com/photos/4459273/pexels-photo-4459273.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    pdfUrl: './pdfs/Dora.pdf',
-  },
+ 
 
 ];
 
